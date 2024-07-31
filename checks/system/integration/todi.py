@@ -181,7 +181,7 @@ def create_checks(check):
     check('bash -c "[[ $SCRATCH == /capstor/scratch/cscs/* ]] || echo FAILED"', not_expected=r'FAILED')
     check('bash -c "[[ $PROJECT == /project/*              ]] || echo FAILED"', not_expected=r'FAILED')
     check('bash -c "[[ $STORE   == /store/*                ]] || echo FAILED"', not_expected=r'FAILED')
-    check('bash -c "[[ $APPS    == /capstor/apps/cscs      ]] || echo FAILED"', not_expected=r'FAILED')
+    check('bash -c "[[ $APPS    == /capstor/apps/cscs/todi ]] || echo FAILED"', not_expected=r'FAILED')
     check('bash -c "[[ $HOME    == /users/*                ]] || echo FAILED"', not_expected=r'FAILED')
 
     check('printenv TMP || echo FAILED', expected=r'FAILED')
